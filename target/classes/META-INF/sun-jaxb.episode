@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.09.14 a las 11:02:22 AM CDT 
+
+  -->
+  <bindings xmlns:tns="http://metalsa.com.mx/soap/web/services/integrator/schemas" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="mx.com.metalsa.spx.soap.service.reports.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getIntegratorRequest">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetIntegratorRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getIntegratorResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetIntegratorResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:response">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.Response"/>
+    </bindings>
+  </bindings>
+  <bindings xmlns:tns="http://xmlns.oracle.com/oxp/service/v2" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="mx.com.metalsa.spx.soap.service.reports.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getTemplate">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplate"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:AccessDeniedException">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.AccessDeniedException"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:OperationFailedException">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.OperationFailedException"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:InvalidParametersException">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.InvalidParametersException"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:createReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.CreateReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:createReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.CreateReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportDefinitionInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportDefinitionInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportDefinitionInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportDefinitionInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ReportDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ReportDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReportDefinitionInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateReportDefinitionInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReportDefinitionInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateReportDefinitionInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateTemplateForReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateTemplateForReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateTemplateForReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateTemplateForReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportParameters">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportParameters"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ReportRequest">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ReportRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportParametersResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportParametersResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ParamNameValues">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ParamNameValues"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableLocales">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableLocales"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableLocalesResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableLocalesResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runDataModel">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunDataModel"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runDataModelResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunDataModelResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runDataModelInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunDataModelInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:runDataModelInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RunDataModelInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportDefinitionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportDefinitionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getMobileAppDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetMobileAppDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getMobileAppDefinitionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetMobileAppDefinitionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:MobileAppDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.MobileAppDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getMobileAppDefinitionInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetMobileAppDefinitionInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getMobileAppDefinitionInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetMobileAppDefinitionInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportSampleData">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportSampleData"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportSampleDataResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportSampleDataResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportSampleDataInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportSampleDataInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportSampleDataInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportSampleDataInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getXDOSchema">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetXDOSchema"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getXDOSchemaResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetXDOSchemaResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getXDOSchemaInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetXDOSchemaInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getXDOSchemaInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetXDOSchemaInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableLocalesInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableLocalesInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableLocalesInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableLocalesInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableXLIFFs">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableXLIFFs"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableXLIFFsResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableXLIFFsResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableXLIFFsInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableXLIFFsInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateAvailableXLIFFsInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateAvailableXLIFFsInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportParametersInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportParametersInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getReportParametersInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetReportParametersInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateParameters">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateParameters"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateParametersResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateParametersResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ParamNameValue">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ParamNameValue"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateParametersInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateParametersInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getTemplateParametersInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetTemplateParametersInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListOfSubjectArea">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetListOfSubjectArea"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListOfSubjectAreaResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetListOfSubjectAreaResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListOfSubjectAreaInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetListOfSubjectAreaInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListOfSubjectAreaInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.GetListOfSubjectAreaInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:createReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.CreateReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:createReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.CreateReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReportDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateReportDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReportDefinitionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateReportDefinitionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateMobileAppDefinition">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateMobileAppDefinition"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateMobileAppDefinitionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateMobileAppDefinitionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateMobileAppDefinitionInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateMobileAppDefinitionInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateMobileAppDefinitionInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateMobileAppDefinitionInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadTemplateForReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadTemplateForReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadTemplateForReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadTemplateForReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadTemplateForReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadTemplateForReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadTemplateForReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadTemplateForReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateTemplateForReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateTemplateForReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateTemplateForReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateTemplateForReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeTemplateForReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveTemplateForReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeTemplateForReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveTemplateForReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeTemplateForReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveTemplateForReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeTemplateForReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveTemplateForReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadXLIFFForReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadXLIFFForReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadXLIFFForReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadXLIFFForReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateXLIFFForReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateXLIFFForReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateXLIFFForReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateXLIFFForReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateXLIFFForReport">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateXLIFFForReport"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateXLIFFForReportResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UpdateXLIFFForReportResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadXLIFFForReportInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadXLIFFForReportInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadXLIFFForReportInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadXLIFFForReportInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadReportDataChunk">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadReportDataChunk"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadReportDataChunkResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadReportDataChunkResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadReportDataChunkInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadReportDataChunkInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:uploadReportDataChunkInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.UploadReportDataChunkInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:downloadReportDataChunk">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.DownloadReportDataChunk"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:downloadReportDataChunkResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.DownloadReportDataChunkResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ReportDataChunk">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ReportDataChunk"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:downloadReportDataChunkInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.DownloadReportDataChunkInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:downloadReportDataChunkInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.DownloadReportDataChunkInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeObjectFromCache">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveObjectFromCache"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeObjectFromCacheResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveObjectFromCacheResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeObjectFromCacheInSession">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveObjectFromCacheInSession"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:removeObjectFromCacheInSessionResponse">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.RemoveObjectFromCacheInSessionResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:TemplateFormatLabelValue">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.TemplateFormatLabelValue"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfTemplateFormatLabelValue">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfTemplateFormatLabelValue"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfString">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfString"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:TemplateFormatsLabelValues">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.TemplateFormatsLabelValues"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfTemplateFormatsLabelValues">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfTemplateFormatsLabelValues"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfParamNameValue">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfParamNameValue"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:MetaData">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.MetaData"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfMetaData">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfMetaData"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:MetaDataList">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.MetaDataList"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:JDBCDataSource">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.JDBCDataSource"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:FileDataSource">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.FileDataSource"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:BIPDataSource">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.BIPDataSource"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:MobileTemplateFormatsLabelValues">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.MobileTemplateFormatsLabelValues"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfMobileTemplateFormatsLabelValues">
+      <class ref="mx.com.metalsa.spx.soap.service.reports.wsdl.ArrayOfMobileTemplateFormatsLabelValues"/>
+    </bindings>
+  </bindings>
+</bindings>
