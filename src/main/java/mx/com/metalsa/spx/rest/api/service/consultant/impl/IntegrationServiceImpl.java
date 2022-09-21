@@ -6,14 +6,12 @@ import mx.com.metalsa.spx.rest.api.model.WSResponse;
 import mx.com.metalsa.spx.rest.api.repository.impl.TblControlRepository;
 import mx.com.metalsa.spx.rest.api.repository.impl.TblCoreIntegratorControlRepository;
 import mx.com.metalsa.spx.rest.api.service.IntegrationService;
-import mx.com.metalsa.spx.soap.service.reports.wsdl.RunReport;
-import mx.com.metalsa.spx.soap.service.reports.wsdl.RunReportResponse;
+import mx.com.metalsa.spx.soap.service.reports.wsdl.*;
 import mx.com.metalsa.spx.soap.web.services.ReportClient;
-import org.omg.CORBA.OBJ_ADAPTER;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.management.relation.RoleUnresolved;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
@@ -25,6 +23,8 @@ import java.util.stream.StreamSupport;
 @Service
 public class IntegrationServiceImpl implements IntegrationService {
 
+
+    private static final Logger log = LoggerFactory.getLogger(IntegrationServiceImpl.class);
 
     @Autowired
     private TblControlRepository tblControlRepository;
@@ -78,8 +78,8 @@ public class IntegrationServiceImpl implements IntegrationService {
     }
 
     @Override
-    public RunReportResponse queryRunReport(String absolutePath) {
-        RunReportResponse runReportResponse = reportClient.runReport(absolutePath);
+    public RunReportResponse queryRunReport(String absolutePath, int minutes) {
+        RunReportResponse runReportResponse = reportClient.runReport(absolutePath, minutes);
         return runReportResponse;
     }
 
@@ -93,18 +93,27 @@ public class IntegrationServiceImpl implements IntegrationService {
 
     @Override
     public WSResponse callIntegration(String tableName) {
+        // get the data from tblControl
         Optional<TblControl> optional = tblControlRepository.findOneByTableName(tableName);
         WSResponse response = new WSResponse();
         Map<String, Object> results = new HashMap<>();
 
         if(optional.isPresent()){
             TblControl tblControl = optional.get();
-            RunReportResponse runReportResponse = queryRunReport(tblControl.getReportAbsolutePath());
+            // execute the runReport
+            RunReportResponse runReportResponse = queryRunReport(tblControl.getReportAbsolutePath(), tblControl.getTiempo());
             if(null != runReportResponse){
+                byte[] bytes = runReportResponse.getRunReportReturn().getReportBytes();
+                String s = new String(bytes, StandardCharsets.UTF_8);
+                log.info("======================= Response RunReport ========================================");
+                log.info(s);
+                log.info("======================= End Response RunReport ========================================");
                 results = callProcedure(tblControl, runReportResponse);
 
                 response.setCode(Integer.parseInt(results.get("O_RESPONSE_CODE").toString()));
+                log.info("O_RESPONSE_CODE:  " + response.getCode());
                 response.setMessage(results.get("O_RESPONSE_MESSAGE").toString());
+                log.info("O_RESPONSE_MESSAGE:  " + response.getMessage());
             }
 
         }

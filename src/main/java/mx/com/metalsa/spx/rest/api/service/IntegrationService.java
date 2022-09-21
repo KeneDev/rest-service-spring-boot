@@ -16,7 +16,7 @@ public interface IntegrationService {
     TblControl updateTblControltById(String tableName, TblControl tblControl);
     void deleteTblControlById(TblControl tblControl);
 
-    RunReportResponse queryRunReport(String absolutePath);
+    RunReportResponse queryRunReport(String absolutePath, int minutes);
 
     Map<String, Object> callProcedure(TblControl tblControl, RunReportResponse runReportResponse);
 

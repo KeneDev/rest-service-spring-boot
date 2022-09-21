@@ -20,7 +20,7 @@ import org.springframework.ws.transport.http.MessageDispatcherServlet;
 @EnableWs
 @Configuration
 //@PropertySource(value = "classpath:implementation.properties")		// Use his when file is in classpath, ex: main/src/resources
-@PropertySource("file:./config/implementation.properties")
+//@PropertySource("file:./config/implementation.properties")
 public class AppConfig {
 	
 	@Value("${info.implementation}")
