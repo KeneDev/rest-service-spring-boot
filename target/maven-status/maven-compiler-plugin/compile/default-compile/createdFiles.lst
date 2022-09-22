@@ -70,6 +70,7 @@ mx\com\metalsa\spx\soap\service\reports\wsdl\GetListOfSubjectAreaInSessionRespon
 mx\com\metalsa\spx\soap\service\reports\wsdl\UpdateXLIFFForReportResponse.class
 mx\com\metalsa\spx\soap\service\reports\wsdl\GetReportSampleDataResponse.class
 mx\com\metalsa\spx\soap\service\reports\wsdl\RunReportInSessionResponse.class
+mx\com\metalsa\spx\rest\api\exception\IntegrationException.class
 mx\com\metalsa\spx\soap\service\reports\wsdl\GetTemplateAvailableLocalesResponse.class
 mx\com\metalsa\spx\soap\service\reports\wsdl\GetTemplateAvailableXLIFFsResponse.class
 mx\com\metalsa\spx\soap\service\reports\wsdl\FileDataSource.class

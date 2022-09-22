@@ -5,7 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
-
+/**
+ * Clase que contiene los metodos necesarios para ejecutar el servicio de RunReport de ReportService
+ * @author Kenenias B. Perez Betanzos
+ * @since 21/09/2022
+ * @version 1.0
+ */
 public class ReportClient extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(ReportClient.class);
@@ -15,12 +20,12 @@ public class ReportClient extends WebServiceGatewaySupport {
     private static final String FORMAT = "xml";
 
     /**
-     * Metodo que ejecuta el servicio SOAP runReport para actualizar los datos del reporte
+     * Metodo que ejecuta el servicio SOAP runReport para actualizar los datos del objeto de control.
      * @param absolutePath ruta absoluta del reporte
      * @param minutes tiempo que se tiene para actualizar el reporte
      * @return Objeto RunReportResponse con la repuesta del servicio
      */
-    public RunReportResponse runReport(String absolutePath, int minutes){
+    public RunReportResponse runReport(String absolutePath, int minutes)throws RuntimeException{
         // set credentials
         RunReport runReport = new RunReport();
         runReport.setUserID(userId);

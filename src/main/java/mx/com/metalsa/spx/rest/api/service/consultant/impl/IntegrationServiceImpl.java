@@ -1,5 +1,6 @@
 package mx.com.metalsa.spx.rest.api.service.consultant.impl;
 
+import mx.com.metalsa.spx.rest.api.exception.IntegrationException;
 import mx.com.metalsa.spx.rest.api.model.TblControl;
 import mx.com.metalsa.spx.rest.api.model.TblControlId;
 import mx.com.metalsa.spx.rest.api.model.WSResponse;
@@ -20,6 +21,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+/**
+ * Clase que implementa la interfaz de IntegrationService
+ * @see IntegrationService
+ * @author Kenenias B. Perez Betanzos
+ * @since 21/09/2022
+ * @version 1.0
+ */
 @Service
 public class IntegrationServiceImpl implements IntegrationService {
 
@@ -78,13 +86,13 @@ public class IntegrationServiceImpl implements IntegrationService {
     }
 
     @Override
-    public RunReportResponse queryRunReport(String absolutePath, int minutes) {
+    public RunReportResponse queryRunReport(String absolutePath, int minutes)throws IntegrationException {
         RunReportResponse runReportResponse = reportClient.runReport(absolutePath, minutes);
         return runReportResponse;
     }
 
     @Override
-    public Map<String, Object> callProcedure(TblControl tblControl, RunReportResponse runReportResponse) {
+    public Map<String, Object> callProcedure(TblControl tblControl, RunReportResponse runReportResponse) throws IntegrationException{
         Map<String, Object> spResult = tblCoreIntegratorControlRepository.genericIntegrator(tblControl.getModule(),
                 tblControl.getTableName(), new String(runReportResponse.getRunReportReturn().getReportBytes(), StandardCharsets.UTF_8));
 
@@ -92,23 +100,36 @@ public class IntegrationServiceImpl implements IntegrationService {
     }
 
     @Override
-    public WSResponse callIntegration(String tableName) {
+    public WSResponse callIntegration(String tableName) throws IntegrationException {
         // get the data from tblControl
         Optional<TblControl> optional = tblControlRepository.findOneByTableName(tableName);
         WSResponse response = new WSResponse();
         Map<String, Object> results = new HashMap<>();
+        RunReportResponse runReportResponse = null;
 
         if(optional.isPresent()){
             TblControl tblControl = optional.get();
             // execute the runReport
-            RunReportResponse runReportResponse = queryRunReport(tblControl.getReportAbsolutePath(), tblControl.getTiempo());
+            try {
+                runReportResponse = queryRunReport(tblControl.getReportAbsolutePath(), tblControl.getTiempo());
+            }catch(Exception ex){
+                throw new IntegrationException("Error al ejecutar el servicio RunReport con los parametros => " +
+                        " path: " + tblControl.getReportAbsolutePath() + " y  tiempo: " + tblControl.getTiempo());
+            }
+
             if(null != runReportResponse){
                 byte[] bytes = runReportResponse.getRunReportReturn().getReportBytes();
                 String s = new String(bytes, StandardCharsets.UTF_8);
-                log.info("======================= Response RunReport ========================================");
+                log.info("======================= Response RunReport ============================================");
                 log.info(s);
                 log.info("======================= End Response RunReport ========================================");
-                results = callProcedure(tblControl, runReportResponse);
+                try {
+                    results = callProcedure(tblControl, runReportResponse);
+                }catch(Exception ex){
+                    throw new IntegrationException("Error al ejecutar el procedure TblCoreIntegratorControlRepository.genericIntegrator, con los parametros => " +
+                            " modulo: " + tblControl.getModule() + ", tabla: " + tblControl.getTableName() + ", data: " +
+                            new String(runReportResponse.getRunReportReturn().getReportBytes(), StandardCharsets.UTF_8));
+                }
 
                 response.setCode(Integer.parseInt(results.get("O_RESPONSE_CODE").toString()));
                 log.info("O_RESPONSE_CODE:  " + response.getCode());
@@ -116,6 +137,8 @@ public class IntegrationServiceImpl implements IntegrationService {
                 log.info("O_RESPONSE_MESSAGE:  " + response.getMessage());
             }
 
+        }else{
+            throw new IntegrationException("No se encuentra la tabla Control: " + tableName);
         }
         return response;
     }
