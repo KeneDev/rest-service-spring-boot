@@ -17,7 +17,7 @@ import java.util.Optional;
 public interface TblControlRepository extends CrudRepository<TblControl, TblControlId> {
 
     /**
-     * Metodo que busca un registro dentro de la tabl TBL_CONTROL por su nombre
+     * Metodo que busca un registro dentro de la tabla TBL_CONTROL por su nombre
      * @param tableName nombre de la tabla que se busca la informacion
      * @return Optional<TblControl> objeto con la informacion recuperada o en su caso null si no se encontro la informacion
      */
