@@ -30,7 +30,7 @@ public class IntegrationController {
 
     /**
      * Metodo que solo sirve de prueba para verificar que los servicios se encuentran activos
-     * @return
+     * @return String cadena que contiene la informacion de los endpoint esta desplegados
      */
     @RequestMapping("/test")
     public String test(){
