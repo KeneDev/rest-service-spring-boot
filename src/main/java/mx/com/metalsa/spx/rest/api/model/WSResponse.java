@@ -4,7 +4,12 @@ import lombok.*;
 
 import java.io.Serializable;
 
-
+/**
+ * Clase que mantiene el modelo para la respuesta del endpoint de los servicios de Integracion
+ * @author Kenenias B. Perez Betanzos
+ * @since 14/09/2022
+ * @version 1.0
+ */
 @EqualsAndHashCode
 @NoArgsConstructor(force = true)
 @AllArgsConstructor

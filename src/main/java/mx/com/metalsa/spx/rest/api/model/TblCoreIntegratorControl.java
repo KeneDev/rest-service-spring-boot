@@ -7,6 +7,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/**
+ * Clase que mantiene el modelo con la tabla TBL_CORE_INTEGRATOR_CONTROL
+ * @author Kenenias B. Perez Betanzos
+ * @since 14/09/2022
+ * @version 1.0
+ */
 @Data
 @Entity
 //@Table(name = "TBL_CORE_INTEGRATOR_CONTROL")

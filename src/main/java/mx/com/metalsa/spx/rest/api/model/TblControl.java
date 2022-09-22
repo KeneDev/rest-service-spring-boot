@@ -9,6 +9,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 
+/**
+ * Clase que mantiene el modelo con la tabla TBL_CONTROL
+ * @author Kenenias B. Perez Betanzos
+ * @since 19/09/2022
+ * @version 1.0
+ */
 @Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
